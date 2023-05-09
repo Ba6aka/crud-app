@@ -1,0 +1,65 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+table {
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    text-align: center;
+}
+
+form * {
+    display: block;
+}
+
+form input {
+    width: 250px;
+    height: 15px;
+    border: solid 1px green;
+}
+
+form textarea {
+    width: 250px;
+    border: solid 1px green;
+}
+
+form {
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-container {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.description {
+    margin: 20px;
+}
+
+.description-container {
+    margin: 0 auto;
+}
+
+.description-container div {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
