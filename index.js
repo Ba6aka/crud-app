@@ -2,7 +2,7 @@ const { createServer } = require('http')
 const { MongoClient } = require(`mongodb`)
 const { createReadStream } = require('fs')
 
-const connectionString = process.env.MONGO_CONNECTION_STRING
+const connectionString = 'mongodb+srv://Ba6aka:WXiPOPVXIxilNNG3@cluster0.tpqf74d.mongodb.net/?retryWrites=true&w=majority'
 
 const options = { serverApi: { version: '1', strict: true, deprecationErrors: true } }
 
