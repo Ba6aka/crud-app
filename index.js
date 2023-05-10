@@ -5,6 +5,7 @@ const { createReadStream } = require('fs')
 const connectionString = 'mongodb+srv://Ba6aka:WXiPOPVXIxilNNG3@cluster0.tpqf74d.mongodb.net/?retryWrites=true&w=majority'
 
 const options = { serverApi: { version: '1', strict: true, deprecationErrors: true } }
+const port = process.env.PORT || 1337
 
 const { typeDictionary } = require('./server/js/mime-types')
 const { getAllWords } = require('./server/api/routes/get-all.js')
@@ -19,6 +20,7 @@ letStart().then(handleServer)
 
 async function handleServer({ server, mongo }) {
     server.off('request', preLoadRequest)
+    
     server.on('request', async (request, response) => {
         const method = request.method
 
@@ -88,8 +90,8 @@ async function startServer() {
 
         server.on('request', preLoadRequest)
 
-        server.listen(process.env.PORT || 1337, () => {
-            console.log('server started at http://localhost:' + 1337)
+        server.listen(port, () => {
+            console.log(`server started at ${port}` + 1337)
             resolve(server)
         })
     })
