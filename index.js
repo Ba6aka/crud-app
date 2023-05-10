@@ -91,7 +91,7 @@ async function startServer() {
         server.on('request', preLoadRequest)
 
         server.listen(port, () => {
-            console.log(`server started at ${port}` + 1337)
+            console.log(`server started at ${port}`)
             resolve(server)
         })
     })
